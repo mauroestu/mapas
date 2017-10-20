@@ -7,7 +7,7 @@ const api = express.Router();
 
 api.get('/information',InformationCtrl.getAllInformation);
 api.get('/information/:date',InformationCtrl.obtainInformation);
-api.post('/save-information',InformationCtrl.saveInformation);
+api.get('/save-information/:value',InformationCtrl.saveInformation);
 api.delete('/delete-information',InformationCtrl.deleteInformation);
 
 module.exports = api;
