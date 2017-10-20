@@ -13,16 +13,16 @@ function getAllInformation(req,res){
 
 function saveInformation(req,res){
 	let data = new information();
-	
-	data.co2 = req.body.co2;
-	data.cx = req.body.cx;
-	data.cy = req.body.cy;
+    
+	data.co2 = req.params.co2;
+	data.cx = req.params.cx;
+	data.cy = req.params.cy;
 
 	data.save((err,fact) => {
 		if(err) res.status(500).send({message: 'Error al guardar en la BD.'}); 
 		else console.log('Dato guardado.'); 		
 	});
-	res.status(200).jsonp({message: 'Dato guardado.'});
+	res.status(200).jsonp({data});
 }
 
 function obtainInformation(req,res){
