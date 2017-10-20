@@ -12,20 +12,11 @@ function getAllInformation(req,res){
 }
 
 function saveInformation(req,res){
-    
-    	let data_to_save = req.params.value;
-    	let cadena = data_to_save.split('.');
 	let data = new information();
-    
-<<<<<<< HEAD
+	
 	data.co2 = req.params.co2;
 	data.cx = req.params.cx;
 	data.cy = req.params.cy;
-=======
-	data.co2 = cadena[0];
-	data.cx = cadena[1];
-	data.cy = cadena[2];
->>>>>>> origin/master
 
 	data.save((err,fact) => {
 		if(err) res.status(500).send({message: 'Error al guardar en la BD.'}); 
