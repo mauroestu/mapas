@@ -15,6 +15,7 @@ function saveInformation(req,res){
     
     let data_to_save = req.params.value;
     let cadena = data_to_save.split('-');
+	let data = new information();
     
 	data.co2 = cadena[0];
 	data.cx = cadena[1];
