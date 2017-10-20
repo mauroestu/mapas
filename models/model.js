@@ -7,8 +7,8 @@ let hoy = new Date();
 let fecha = hoy.getDate() + (hoy.getMonth() + 1) +  hoy.getFullYear();
 
 const InformationSchema = Schema({
-	cx : {type: Number, required: true},
-	cy: {type: Number, required: true},
+	cx : {type: String, required: true},
+	cy: {type: String, required: true},
 	co2: {type: Number, required: true},
     fecha: { type: Number, default: fecha}
 });
